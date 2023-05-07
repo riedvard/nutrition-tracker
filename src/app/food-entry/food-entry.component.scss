@@ -1,0 +1,15 @@
+h1 {
+    text-align: center;
+}
+
+.form {
+    //display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1% auto;
+}
+
+.form-group {
+    color: #f2f2f2;
+}

@@ -1,0 +1,45 @@
+<ng-container *ngIf="authenticationService.isLoggedIn()"></ng-container>
+<app-navbar></app-navbar>
+<h1 appHighlight>Üdv a táplálék nyomonkövetés alkalmazásban</h1>
+
+<div class="container" fxLayout="row" fxLayoutGap="20px">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title appHighlight>Magas kalóriatartalmú bejegyzések</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="highCalorieEntries" #tableRef1>
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef appHighlight>Dátum</th>
+          <td mat-cell *matCellDef="let entry" appHighlight>{{ entry.date | formattedDate }}</td>
+        </ng-container>
+        <ng-container matColumnDef="calories">
+          <th mat-header-cell *matHeaderCellDef appHighlight>Kalória</th>
+          <td mat-cell *matCellDef="let entry" appHighlight>{{ entry.calories }} kalória</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title appHighlight>Legutóbbi 5 táplálékbeviteli adat</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="lastNFoodEntries" #tableRef2>
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef appHighlight>Dátum</th>
+          <td mat-cell *matCellDef="let entry" appHighlight>{{ entry.date | formattedDate }}</td>
+        </ng-container>
+        <ng-container matColumnDef="calories">
+          <th mat-header-cell *matHeaderCellDef appHighlight>Kalória</th>
+          <td mat-cell *matCellDef="let entry" appHighlight>{{ entry.calories }} kalória</td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

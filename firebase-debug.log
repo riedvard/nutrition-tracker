@@ -1,0 +1,48 @@
+[debug] [2023-05-07T19:22:00.195Z] ----------------------------------------------------------------------
+[debug] [2023-05-07T19:22:00.200Z] Command:       D:\Program Files\nodejs\node.exe C:\Users\edvar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2023-05-07T19:22:00.200Z] CLI Version:   11.30.0
+[debug] [2023-05-07T19:22:00.201Z] Platform:      win32
+[debug] [2023-05-07T19:22:00.201Z] Node Version:  v18.14.1
+[debug] [2023-05-07T19:22:00.203Z] Time:          Sun May 07 2023 21:22:00 GMT+0200 (közép-európai nyári idő)
+[debug] [2023-05-07T19:22:00.203Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-07T19:22:00.305Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-07T19:22:00.305Z] > authorizing via signed-in user (edvard.rigo@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Tanulmanyok\8\Web\Nutrition\nutrition-tracker
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-07T19:22:22.372Z] Using project from CLI flag: nutritiontracker-9e32e
+[debug] [2023-05-07T19:22:22.377Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nutritiontracker-9e32e [none]
+[debug] [2023-05-07T19:22:22.706Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nutritiontracker-9e32e 200
+[debug] [2023-05-07T19:22:22.706Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nutritiontracker-9e32e {"projectId":"nutritiontracker-9e32e","projectNumber":"189361016416","displayName":"nutritiontracker","name":"projects/nutritiontracker-9e32e","resources":{"hostingSite":"nutritiontracker-9e32e","realtimeDatabaseInstance":"nutritiontracker-9e32e-default-rtdb"},"state":"ACTIVE","etag":"1_542e42f5-3043-4830-82b4-dcf4740c9013"}
+[info] i  Using project nutritiontracker-9e32e (nutritiontracker) 
+[info] 
+=== Hosting Setup
+[debug] [2023-05-07T19:26:43.603Z] Error: Command failed: npx --yes -p @angular/cli@latest ng new nutritiontracker-9e32e --directory hosting --skip-git
+    at checkExecSyncError (node:child_process:885:11)
+    at execSync (node:child_process:957:15)
+    at Object.init (C:\Users\edvar\AppData\Roaming\npm\node_modules\firebase-tools\lib\frameworks\angular\index.js:26:34)
+    at doSetup (C:\Users\edvar\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\hosting\index.js:88:76)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async init (C:\Users\edvar\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\index.js:37:9)
+[error] 
+[error] Error: An unexpected error has occurred.

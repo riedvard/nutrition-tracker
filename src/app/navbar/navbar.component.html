@@ -1,0 +1,24 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button class="foodButtons" mat-button routerLink="/home" appButtonClr>
+      Kezőlap
+      <mat-icon fontIcon="home"></mat-icon>
+    </button>
+    <button class="foodButtons" mat-button routerLink="/food-entry" appButtonClr>
+      Táplálék Bevitel
+      <mat-icon fontIcon="egg"></mat-icon>
+    </button>
+    <button class="foodButtons" mat-button routerLink="/food-history" appButtonClr>
+      Táplálék Előzmények
+      <mat-icon fontIcon="history"></mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <button mat-raised-button color="accent" *ngIf="IsLoggedIn" (click)="Logout()" appButtonWar>
+      Kijelentkezés
+      <mat-icon fontIcon="logout"></mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

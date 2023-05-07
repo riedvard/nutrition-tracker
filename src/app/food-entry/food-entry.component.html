@@ -1,0 +1,42 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<ng-container *ngIf="authenticationService.isLoggedIn()"></ng-container>
+    <app-navbar></app-navbar>
+<div class="container">
+    <h1 appHighlight>Táplálék bevitel</h1>
+    <form class="form" (ngSubmit)="saveEntry()">
+        <mat-form-field appearance="outline" class="form-group">
+            <mat-label>
+                <mat-icon fontIcon="local_fire_department"></mat-icon>
+                Kalória
+            </mat-label>
+            <input matInput type="number" [(ngModel)]="calories" name="calories" required />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-group">
+            <mat-label>
+                <mat-icon fontIcon="bakery_dining"></mat-icon>
+                Szénhidrát
+            </mat-label>
+            <input matInput type="number" [(ngModel)]="carbohydrates" name="carbohydrates" required />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-group">
+            <mat-label>
+                <mat-icon fontIcon="scatter_plot"></mat-icon>
+                Protein
+            </mat-label>
+            <input matInput type="number" [(ngModel)]="protein" name="protein" required />
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form-group">
+            <mat-label>
+                <mat-icon fontIcon="water_drop"></mat-icon>
+                Zsír
+            </mat-label>
+            <input matInput type="number" [(ngModel)]="fat" name="fat" required />
+        </mat-form-field>
+        <br>
+        <button mat-raised-button type="submit" appButtonMod>Mentés</button>
+        
+    </form>
+  </div>
+  

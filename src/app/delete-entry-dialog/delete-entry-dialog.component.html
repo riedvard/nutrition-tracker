@@ -1,0 +1,8 @@
+<h2 mat-dialog-title appHighlight>Törlés megerősítése</h2>
+<mat-dialog-content appHighlight>
+  Biztosan törölni szeretnéd ezt a bejegyzést?
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button color="warn" (click)="dialogRef.close(true)" appButtonWar>Igen, biztos törlöm</button>
+  <button mat-button (click)="dialogRef.close()" appHighlight>Mégsem</button>
+</mat-dialog-actions>
