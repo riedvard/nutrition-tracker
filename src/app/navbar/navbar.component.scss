@@ -1,0 +1,16 @@
+:host ::ng-deep .mat-toolbar-row {
+  background-color: #91C7B1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.foodButtons {
+  margin-right: 1%;
+}
+  

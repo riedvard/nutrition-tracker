@@ -1,0 +1,25 @@
+<h2 mat-dialog-title appHighlight>Szerkesztés</h2>
+<mat-dialog-content appHighlight>
+  <form [formGroup]="formGroup">
+    <!-- Add the form fields here -->
+    <mat-form-field>
+      <input matInput placeholder="Dátum" formControlName="date">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Kalória" formControlName="calories">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Karbonhidrát" formControlName="carbohydrates">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Protein" formControlName="protein">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Zsír" formControlName="fat">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onSave()" appButtonMod>Mentés</button>
+  <button mat-button (click)="onCancel()" appHighlight>Mégse</button>
+</mat-dialog-actions>
